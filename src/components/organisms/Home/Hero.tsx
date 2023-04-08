@@ -1,6 +1,7 @@
 import React from "react";
 // import HeroBG from "../../../../public/hero-bg.png";
-import HeroBG from "https://househunter.vercel.app/hero-bg.png";
+import HeroBG from "../../../../src/assets/hero-bg.png";
+// import HeroBG from "https://househunter.vercel.app/hero-bg.png";
 import { BlurImage } from "../../atoms/BlurImage";
 import { HeroLeft } from "./HeroLeft";
 import { CarouselHero } from "../../molecules/CarouselHero";
