@@ -27,10 +27,10 @@ export const HeroLeft: React.FC = () => {
       <div>
         <p className="text-primary-400">Our Partnership</p>
         <div className="flex items-center justify-start gap-4">
-          <img src="https://househounter.vercel.app/traveloka.png" alt="" />
-          <img src="https://househounter.vercel.app/tiket.png" alt="" />
-          <img src="https://househounter.vercel.app/airbnb.png" alt="" />
-          <img src="https://househounter.vercel.app/trip-advisor.png" alt="" />
+          <img src="https://househunter.vercel.app/traveloka.png" alt="" />
+          <img src="https://househunter.vercel.app/tiket.png" alt="" />
+          <img src="https://househunter.vercel.app/airbnb.png" alt="" />
+          <img src="https://househunter.vercel.app/trip-advisor.png" alt="" />
         </div>
       </div>
     </div>
