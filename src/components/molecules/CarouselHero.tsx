@@ -30,7 +30,7 @@ export const CarouselHero: React.FC = () => {
         >
           <div className="flex items-center">
             <img
-              src="../../../public/rheza.png"
+              src="https://househunter.vercel.app/rheza.png"
               alt="tes"
               className="w-10 h-10 rounded-full"
             />
