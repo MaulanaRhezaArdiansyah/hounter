@@ -34,7 +34,7 @@ export const FeaturedCard: React.FC = () => {
     <div className="flex items-center gap-3 overflow-x-auto scrollbar-hide no-scrollbar">
       {featureCards?.map(({ id, image, name, price }) => (
         <div key={id} className="pl-12 flex flex-col">
-          <ImageCard source={`../../../../public/${image}`} />
+          <ImageCard source={`https://househunter.vercel.app/${image}`} />
           <TitleCard>{name}</TitleCard>
           <PriceCard>{price}</PriceCard>
         </div>
