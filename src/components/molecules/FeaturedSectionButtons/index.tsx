@@ -10,7 +10,7 @@ export const FeaturedSectionButtons: React.FC = () => {
   const [active, setActive] = useState("House");
 
   return (
-    <div className="flex justify-between mb-10">
+    <div className="flex justify-between mb-5">
       <div>
         <SectionCategory>Our Recommendation</SectionCategory>
         <SectionTitle>Featured House</SectionTitle>
