@@ -2,9 +2,9 @@ import React from "react";
 // import HeroBG from "../../../../public/hero-bg.png";
 import HeroBG from "../../../../src/assets/hero-bg.png";
 // import HeroBG from "https://househunter.vercel.app/hero-bg.png";
-import { BlurImage } from "../../atoms/BlurImage";
+import { BlurImage } from "../../Atoms/BlurImage";
 import { HeroLeft } from "./HeroLeft";
-import { CarouselHero } from "../../molecules/CarouselHero";
+import { CarouselHero } from "../../Molecules/CarouselHero";
 
 export const Hero: React.FC = () => {
   return (
@@ -13,7 +13,7 @@ export const Hero: React.FC = () => {
         <BlurImage />
         <HeroLeft />
         <div
-          className="right w-1/2 rounded-bl-[80px] h-full flex"
+          className="right w-1/2 rounded-bl-[80px] h-full flex relative overflow-x-scroll no-scrollbar scrollbar-hide bg-no-repeat"
           style={{ backgroundImage: `url(${HeroBG})` }}
         >
           <CarouselHero />

@@ -1,6 +1,6 @@
-import { About } from "../components/pages/About";
-import { Article } from "../components/pages/Article";
-import { Home } from "../components/pages/Home";
+import { About } from "../pages/About";
+import { Article } from "../pages/Article";
+import { Home } from "../pages/Home";
 import { routerType } from "../types/router.types";
 
 export const pagesData: routerType[] = [

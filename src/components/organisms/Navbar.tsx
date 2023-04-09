@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
-import { Logo } from "../atoms/Logo";
-import { NavLink } from "../atoms/NavLink";
-import { DropdownNav, PropertyDropdown2 } from "../molecules/DropdownNav";
+import { Logo } from "../Atoms/Logo";
+import { NavLink } from "../Atoms/NavLink";
+import { DropdownNav, PropertyDropdown2 } from "../Molecules/DropdownNav";
 import { useNavigate } from "react-router-dom";
 
 export const Navbar: React.FC = () => {
