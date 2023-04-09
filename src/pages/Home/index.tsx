@@ -1,6 +1,6 @@
 import React from "react";
-import { Hero } from "../../components/Organisms/Home/Hero";
-import { OurRecomendation } from "../../components/Organisms/Home/OurRecomendation";
+import { Hero } from "../../components/organisms/Home/Hero";
+import { OurRecomendation } from "../../components/organisms/Home/OurRecomendation";
 
 export const Home: React.FC = () => {
   return (

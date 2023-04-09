@@ -1,11 +1,11 @@
 import React from "react";
-import { SectionCategory } from "../../../Atoms/SectionCategory";
-import { SectionTitle } from "../../../Atoms/SectionTitle";
-import { CategoryButton } from "../../../Atoms/CategoryButton";
+import { SectionCategory } from "../../../atoms/SectionCategory";
+import { SectionTitle } from "../../../atoms/SectionTitle";
+import { CategoryButton } from "../../../atoms/CategoryButton";
 import { HiHome } from "react-icons/hi";
 import { MdApartment, MdVilla } from "react-icons/md";
 import { FiChevronRight, FiChevronLeft } from "react-icons/fi";
-import { FeaturedCard } from "../../../Molecules/FeaturedCard";
+import { FeaturedCard } from "../../../molecules/FeaturedCard";
 
 export const OurRecomendation: React.FC = () => {
   return (

@@ -1,7 +1,7 @@
 import React from "react";
-import { ImageCard } from "../../Atoms/FeaturedImageCard";
-import { TitleCard } from "../../Atoms/FeaturedTitleCard";
-import { PriceCard } from "../../Atoms/FeaturedPriceCard";
+import { ImageCard } from "../../atoms/FeaturedImageCard";
+import { TitleCard } from "../../atoms/FeaturedTitleCard";
+import { PriceCard } from "../../atoms/FeaturedPriceCard";
 
 export const FeaturedCard: React.FC = () => {
   const featureCards = [

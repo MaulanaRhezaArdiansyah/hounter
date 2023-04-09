@@ -2,9 +2,9 @@ import React from "react";
 // import HeroBG from "../../../../public/hero-bg.png";
 import HeroBG from "../../../../src/assets/hero-bg.png";
 // import HeroBG from "https://househunter.vercel.app/hero-bg.png";
-import { BlurImage } from "../../Atoms/BlurImage";
+import { BlurImage } from "../../atoms/BlurImage";
 import { HeroLeft } from "./HeroLeft";
-import { CarouselHero } from "../../Molecules/CarouselHero";
+import { CarouselHero } from "../../molecules/CarouselHero";
 
 export const Hero: React.FC = () => {
   return (
