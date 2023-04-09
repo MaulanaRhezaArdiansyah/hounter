@@ -3,7 +3,6 @@ import { ImageCard } from "../../atoms/FeaturedImageCard";
 import { TitleCard } from "../../atoms/FeaturedTitleCard";
 import { PriceCard } from "../../atoms/FeaturedPriceCard";
 import { OwnerCard } from "../../atoms/FeaturedOwnerCard";
-import { Badge } from "../../atoms/FeaturedImageCard/Badge";
 
 export const FeaturedCard: React.FC = () => {
   const featureCards = [
@@ -73,8 +72,7 @@ export const FeaturedCard: React.FC = () => {
             <TitleCard>{name}</TitleCard>
             <PriceCard>{price}</PriceCard>
             <OwnerCard
-              // source={`https://househunter.vercel.app/${owner_avatar}`}
-              source={`../../../../public/${owner_avatar}`}
+              source={`https://househunter.vercel.app/${owner_avatar}`}
               name={owner_name}
               owner_name={owner_name}
               owner_address={owner_address}

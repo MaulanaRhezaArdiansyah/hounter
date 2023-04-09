@@ -1,4 +1,7 @@
 import React from "react";
+import { AiFillFire } from "react-icons/ai";
+import { IoIosWallet } from "react-icons/io";
+import { HiHome } from "react-icons/hi";
 
 interface Props {
   bgColor?: string;
@@ -28,9 +31,19 @@ export const Badge: React.FC<Props> = ({
           : preferences === "Best Deals"
           ? "text-[#047857]"
           : textColor
-      } px-5 py-[6px] rounded-full bottom-10 left-3`}
+      } px-5 py-[6px] rounded-full bottom-10 left-3 flex items-center gap-2`}
     >
-      {preferences}
+      {preferences === "Popular" ? (
+        <AiFillFire />
+      ) : preferences === "New House" ? (
+        <HiHome />
+      ) : preferences === "Best Deals" ? (
+        <IoIosWallet />
+      ) : (
+        <AiFillFire />
+      )}
+
+      <p>{preferences}</p>
     </div>
   );
 };
