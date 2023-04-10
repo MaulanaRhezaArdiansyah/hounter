@@ -17,9 +17,9 @@ export const ArticleHome: React.FC = () => {
       <SectionTitle classname="md:w-[50%] text-center">
         Find out more about selling and buying homes
       </SectionTitle>
-      <button onClick={() => navigate("/article")}>
+      <div onClick={() => navigate("/article")}>
         <GreenButton classname="mt-5">More Article</GreenButton>
-      </button>
+      </div>
       <div className="flex w-full px-20 mt-10 z-10">
         <div className="flex flex-col gap-10 w-[60%]">
           <ArticleCard

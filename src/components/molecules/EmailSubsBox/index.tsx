@@ -1,26 +1,32 @@
-import React from "react";
+import React, { useState } from "react";
 import { SectionTitle } from "../../atoms/SectionTitle";
 import { SearchBox } from "../../atoms/SearchBox";
 // import { IoMail } from "react-icons/io5";
 import { AiFillMail } from "react-icons/ai";
 
 export const EmailSubsBox: React.FC = () => {
-  const subscribe = (event: React.MouseEvent<Element, MouseEvent>) => {
+  const [texts, setTexts] = useState<string>("");
+  const subscribe = (event: React.FormEvent) => {
     event.preventDefault();
     alert(`You're successfully subscribe to our website! 🥳`);
+    setTexts("");
   };
+  console.log(texts);
+
   return (
     <div className="relative w-full h-72 flex flex-col items-center justify-center rounded-2xl gradient-subs-email">
       <SectionTitle classname="w-[50%] text-center">
         Subscribe For More Info and update from Hounter
       </SectionTitle>
       <SearchBox
-        onclickBro={(e) => subscribe(e)}
+        onsubmitBro={subscribe}
         classname="bg-white w-[50%] mt-5"
         children="Subscribe Now"
         section="email-subs"
         widthButton="w-60"
         placeholder="Text your email here"
+        texts={texts}
+        setTexts={setTexts}
         iconSearch={<AiFillMail size={32} color="#3B82F6" />}
       />
       <div className="absolute left-5 w-60 h-60">

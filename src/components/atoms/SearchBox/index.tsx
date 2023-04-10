@@ -8,7 +8,9 @@ interface Props {
   section?: string;
   widthButton?: string;
   placeholder: string;
-  onclickBro?: React.MouseEventHandler;
+  onsubmitBro?: React.FormEventHandler;
+  texts: string;
+  setTexts: React.Dispatch<React.SetStateAction<string>>;
 }
 export const SearchBox: React.FC<Props> = ({
   iconSearch,
@@ -18,7 +20,9 @@ export const SearchBox: React.FC<Props> = ({
   section,
   widthButton,
   placeholder,
-  onclickBro,
+  onsubmitBro,
+  texts,
+  setTexts,
 }) => {
   const [focus, setFocus] = useState(false);
   const activeInput = () => {
@@ -26,6 +30,7 @@ export const SearchBox: React.FC<Props> = ({
   };
   return (
     <form
+      onSubmit={onsubmitBro}
       className={`border-2 ${
         focus
           ? "border-green-1200"
@@ -36,14 +41,16 @@ export const SearchBox: React.FC<Props> = ({
     >
       <div className="ml-4">{iconSearch}</div>
       <input
+        onChange={(event) => setTexts(event?.target?.value)}
         onFocus={activeInput}
         onBlur={activeInput}
         type="text"
         placeholder={placeholder}
+        value={texts}
         className={`mr-auto h-full w-full focus:outline-none bg-transparent ml-2`}
       />
       <button
-        onClick={onclickBro}
+        type="submit"
         className={`bg-green-1200 flex justify-center items-center rounded-full mr-2 px-5 py-3 text-white hover:bg-green-1300 duration-150 ${widthButton}`}
       >
         <p>{children}</p>
