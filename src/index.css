@@ -15,3 +15,13 @@ body {
 .scrollbar-hide::-webkit-scrollbar {
   display: none;
 }
+
+.gradient-subs-email {
+  background: rgb(59, 130, 246);
+  background: linear-gradient(
+    90deg,
+    rgba(59, 130, 246, 1) 0%,
+    rgba(205, 223, 252, 1) 30%,
+    rgba(59, 130, 246, 1) 150%
+  );
+}

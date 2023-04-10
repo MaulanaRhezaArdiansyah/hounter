@@ -1,6 +1,6 @@
 import React from "react";
 
-export const BlurImage = () => {
+export const BlurImage: React.FC = () => {
   return (
     <svg
       width="444"

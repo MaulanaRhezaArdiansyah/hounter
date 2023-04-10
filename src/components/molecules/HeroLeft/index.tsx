@@ -1,11 +1,8 @@
 import React, { useState } from "react";
 import { HiLocationMarker, HiChevronRight } from "react-icons/hi";
+import { SearchBox } from "../../atoms/SearchBox";
 
 export const HeroLeft: React.FC = () => {
-  const [focus, setFocus] = useState(false);
-  const activeInput = () => {
-    setFocus(!focus);
-  };
   return (
     <div className="left flex flex-col justify-center h-full w-1/2 z-10 pt-10 pl-20">
       <h1 className="capitalize font-bold text-4xl w-[60%] text-primary-800 mb-7">
@@ -15,7 +12,14 @@ export const HeroLeft: React.FC = () => {
         Everything you need about finding your place to live will be here, where
         it will be easier for you
       </p>
-      <form
+      <SearchBox
+        iconSearch={<HiLocationMarker size={32} color="#F59E0B" />}
+        iconButtonSearch={<HiChevronRight />}
+        children="Search"
+        classname="w-[80%]"
+        placeholder="Search for the location you want!"
+      />
+      {/* <form
         className={`border-2 ${
           focus ? "border-green-1200" : "border-[#E0E3EB]"
         }  rounded-full w-[80%] py-1 mb-7 flex items-center duration-150`}
@@ -33,7 +37,7 @@ export const HeroLeft: React.FC = () => {
         <button className="bg-green-1200 flex justify-center items-center rounded-full mr-2 px-4 py-3 text-white hover:bg-green-1300 duration-150">
           Search <HiChevronRight />
         </button>
-      </form>
+      </form> */}
       <div>
         <p className="text-primary-400">Our Partnership</p>
         <div className="flex items-center justify-start gap-4">
