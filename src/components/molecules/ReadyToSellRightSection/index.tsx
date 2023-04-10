@@ -11,7 +11,8 @@ export const ReadyToSellRightSection: React.FC = () => {
           loop
           light={
             <img
-              src="../../../../public/house-play-video.png"
+              // src="../../../../public/house-play-video.png"
+              src="https://househunter.vercel.app/house-play-video.png"
               alt="thumbnail"
               className="w-full h-full"
             />
@@ -22,13 +23,16 @@ export const ReadyToSellRightSection: React.FC = () => {
         />
       </div>
       <div className="absolute -bottom-10 left-8 rounded-md">
-        <img src="../../../../public/sofa.png" alt="" />
+        {/* <img src="../../../../public/sofa.png" alt="" /> */}
+        <img src="https://househunter.vercel.app/sofa.png" alt="" />
       </div>
       <div className="absolute -bottom-10 left-[340px] rounded-md">
-        <img src="../../../../public/chair.png" alt="" />
+        {/* <img src="../../../../public/chair.png" alt="" /> */}
+        <img src="https://househunter.vercel.app/chair.png" alt="" />
       </div>
       <div className="absolute -bottom-10 right-[90px] rounded-md">
-        <img src="../../../../public/accessories.png" alt="" />
+        {/* <img src="../../../../public/accessories.png" alt="" /> */}
+        <img src="https://househunter.vercel.app/accessories.png" alt="" />
       </div>
     </div>
   );
