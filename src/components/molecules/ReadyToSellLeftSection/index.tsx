@@ -13,12 +13,12 @@ export const ReadyToSellLeftSection: React.FC = () => {
     <div className="w-1/2">
       <SectionCategory>Ready to Sell!</SectionCategory>
       <SectionTitle>Let’s tour and see our house!</SectionTitle>
-      <p className="text-primary-600 text-base pl-12 w-[90%] mb-5">
+      <p className="text-primary-600 text-base pl-12 w-[85%] mb-5">
         Houses recommended by our partners that have been curated to become the
         home of your dreams!
       </p>
       <p className="text-primary-800 font-semibold pl-12 mb-4">House Detail</p>
-      <div className="ml-12 flex flex-wrap gap-x-10 gap-y-4 border-b-2 border-[#F0F3FD] pb-8 mb-8">
+      <div className="ml-12 flex flex-wrap gap-x-10 gap-y-4 border-b-2 w-[80%] border-[#F0F3FD] pb-8 mb-8">
         <PropertyDetail
           unitIcon={<IoBed size={24} />}
           children={"4 Bedrooms"}

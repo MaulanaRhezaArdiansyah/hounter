@@ -27,8 +27,8 @@ export const Navbar: React.FC = () => {
     <>
       <nav
         className={`${
-          colorNav ? "bg-green-1200" : "bg-transparent"
-        } flex items-center justify-between px-20 h-14 md:h-24 fixed left-0 right-0 duration-150 ease-in-out z-30`}
+          colorNav ? "bg-green-1200/80 backdrop-blur-sm" : "bg-transparent"
+        } flex items-center justify-between px-20 h-14 md:h-24 fixed left-0 right-0 duration-200 ease-in-out z-30`}
       >
         <Logo />
         <div

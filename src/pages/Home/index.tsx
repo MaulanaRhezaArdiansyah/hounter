@@ -5,7 +5,7 @@ import { ReadyToSell } from "../../components/organisms/Home/ReadyToSell";
 
 export const Home: React.FC = () => {
   return (
-    <div className="h-[300vh] w-full">
+    <div className="h-[500vh] w-full">
       <Hero />
       <OurRecomendation />
       <ReadyToSell />
