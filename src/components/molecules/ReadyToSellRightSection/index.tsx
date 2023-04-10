@@ -35,14 +35,26 @@ export const ReadyToSellRightSection: React.FC = () => {
         <></>
       ) : (
         <>
-          <div className="absolute -bottom-10 left-8 rounded-md">
-            <img src="https://househunter.vercel.app/sofa.png" alt="" />
+          <div className="absolute -bottom-10 left-8 rounded-md overflow-hidden">
+            <img
+              src="https://househunter.vercel.app/sofa.png"
+              alt=""
+              className="hover:scale-110 duration-150 h-full w-full"
+            />
           </div>
-          <div className="absolute -bottom-10 left-[340px] rounded-md">
-            <img src="https://househunter.vercel.app/chair.png" alt="" />
+          <div className="absolute -bottom-10 left-[340px] rounded-md overflow-hidden">
+            <img
+              src="https://househunter.vercel.app/chair.png"
+              alt=""
+              className="hover:scale-110 duration-150 h-full w-full"
+            />
           </div>
-          <div className="absolute -bottom-10 right-[90px] rounded-md">
-            <img src="https://househunter.vercel.app/accessories.png" alt="" />
+          <div className="absolute -bottom-10 right-[90px] rounded-md overflow-hidden">
+            <img
+              src="https://househunter.vercel.app/accessories.png"
+              alt=""
+              className="hover:scale-110 duration-150 h-full w-full"
+            />
           </div>
         </>
       )}
