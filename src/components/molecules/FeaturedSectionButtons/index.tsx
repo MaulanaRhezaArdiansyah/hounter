@@ -8,7 +8,6 @@ import { FiChevronRight, FiChevronLeft } from "react-icons/fi";
 
 export const FeaturedSectionButtons: React.FC = () => {
   const [active, setActive] = useState("House");
-
   return (
     <div className="flex justify-between mb-5">
       <div>
@@ -21,7 +20,7 @@ export const FeaturedSectionButtons: React.FC = () => {
             classnameCondition={
               active === "House"
                 ? "bg-green-1000 border-green-1000 text-green-1200"
-                : "bg-white"
+                : "bg-white border-primary-400 text-primary-400"
             }
             categoryLogo={<HiHome size={22} />}
             children={"House"}
@@ -32,7 +31,7 @@ export const FeaturedSectionButtons: React.FC = () => {
             classnameCondition={
               active === "Villa"
                 ? "bg-green-1000 border-green-1000 text-green-1200"
-                : "bg-white"
+                : "bg-white border-primary-400 text-primary-400"
             }
             categoryLogo={<MdVilla size={22} />}
             children={"Villa"}
@@ -43,7 +42,7 @@ export const FeaturedSectionButtons: React.FC = () => {
             classnameCondition={
               active === "Apartment"
                 ? "bg-green-1000 border-green-1000 text-green-1200"
-                : "bg-white"
+                : "bg-white border-primary-400 text-primary-400"
             }
             categoryLogo={<MdApartment size={22} />}
             children={"Apartment"}
