@@ -1,7 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import { HiLocationMarker, HiChevronRight } from "react-icons/hi";
 
 export const HeroLeft: React.FC = () => {
+  const [focus, setFocus] = useState(false);
+  const activeInput = () => {
+    setFocus(!focus);
+  };
   return (
     <div className="left flex flex-col justify-center h-full w-1/2 z-10 pt-10 pl-20">
       <h1 className="capitalize font-bold text-4xl w-[60%] text-primary-800 mb-7">
@@ -11,16 +15,22 @@ export const HeroLeft: React.FC = () => {
         Everything you need about finding your place to live will be here, where
         it will be easier for you
       </p>
-      <form className="border border-[#E0E3EB] rounded-full w-[80%] py-1 mb-7 flex items-center">
+      <form
+        className={`border-2 ${
+          focus ? "border-green-1200" : "border-[#E0E3EB]"
+        }  rounded-full w-[80%] py-1 mb-7 flex items-center duration-150`}
+      >
         <div className="ml-4">
           <HiLocationMarker size={32} color="#F59E0B" />
         </div>
         <input
+          onFocus={activeInput}
+          onBlur={activeInput}
           type="text"
           placeholder="Search for the location you want!"
-          className="mr-auto h-full w-full focus:outline-none bg-transparent ml-2"
+          className={`mr-auto h-full w-full focus:outline-none bg-transparent ml-2`}
         />
-        <button className="bg-green-1200 flex justify-center items-center rounded-full mr-2 px-4 py-3 text-white">
+        <button className="bg-green-1200 flex justify-center items-center rounded-full mr-2 px-4 py-3 text-white hover:bg-green-1300 duration-150">
           Search <HiChevronRight />
         </button>
       </form>

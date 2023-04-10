@@ -1,7 +1,7 @@
 import React from "react";
-import { Hero } from "../../components/organisms/Home/Hero";
 import { OurRecomendation } from "../../components/organisms/Home/OurRecomendation";
 import { ReadyToSell } from "../../components/organisms/Home/ReadyToSell";
+import { Hero } from "../../components/organisms/Home/Hero";
 
 export const Home: React.FC = () => {
   return (

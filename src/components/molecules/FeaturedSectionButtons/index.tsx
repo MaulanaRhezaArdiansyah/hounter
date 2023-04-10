@@ -50,10 +50,10 @@ export const FeaturedSectionButtons: React.FC = () => {
         </button>
       </div>
       <div className="flex items-center gap-3 pr-20">
-        <button className="bg-green-1200 text-white w-12 h-12 rounded-full flex items-center justify-center">
+        <button className="bg-green-1200 text-white w-12 h-12 rounded-full flex items-center justify-center hover:bg-green-1300 duration-150">
           <FiChevronLeft size={22} />
         </button>
-        <button className="bg-green-1200 text-white w-12 h-12 rounded-full flex items-center justify-center">
+        <button className="bg-green-1200 text-white w-12 h-12 rounded-full flex items-center justify-center hover:bg-green-1300 duration-150">
           <FiChevronRight size={22} />
         </button>
       </div>
