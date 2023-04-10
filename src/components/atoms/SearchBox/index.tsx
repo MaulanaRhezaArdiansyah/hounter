@@ -8,6 +8,7 @@ interface Props {
   section?: string;
   widthButton?: string;
   placeholder: string;
+  onclickBro?: React.MouseEventHandler;
 }
 export const SearchBox: React.FC<Props> = ({
   iconSearch,
@@ -17,6 +18,7 @@ export const SearchBox: React.FC<Props> = ({
   section,
   widthButton,
   placeholder,
+  onclickBro,
 }) => {
   const [focus, setFocus] = useState(false);
   const activeInput = () => {
@@ -41,6 +43,7 @@ export const SearchBox: React.FC<Props> = ({
         className={`mr-auto h-full w-full focus:outline-none bg-transparent ml-2`}
       />
       <button
+        onClick={onclickBro}
         className={`bg-green-1200 flex justify-center items-center rounded-full mr-2 px-5 py-3 text-white hover:bg-green-1300 duration-150 ${widthButton}`}
       >
         <p>{children}</p>

@@ -4,8 +4,10 @@ import { SectionTitle } from "../../../atoms/SectionTitle";
 import { GreenButton } from "../../../atoms/GreenButton";
 import { ArticleCard } from "../../../molecules/ArticleCard";
 import { BlurArticle } from "../../../atoms/BlurImageArticle";
+import { useNavigate } from "react-router-dom";
 
 export const ArticleHome: React.FC = () => {
+  const navigate = useNavigate();
   return (
     <div className="relative flex flex-col items-center pt-36 mb-32">
       <BlurArticle />
@@ -15,7 +17,9 @@ export const ArticleHome: React.FC = () => {
       <SectionTitle classname="md:w-[50%] text-center">
         Find out more about selling and buying homes
       </SectionTitle>
-      <GreenButton classname="mt-5">More Article</GreenButton>
+      <button onClick={() => navigate("/article")}>
+        <GreenButton classname="mt-5">More Article</GreenButton>
+      </button>
       <div className="flex w-full px-20 mt-10 z-10">
         <div className="flex flex-col gap-10 w-[60%]">
           <ArticleCard
