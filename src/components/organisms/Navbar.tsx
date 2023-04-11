@@ -3,6 +3,7 @@ import { Logo } from "../atoms/Logo";
 import { NavLink } from "../atoms/NavLink";
 import { DropdownNav, PropertyDropdown2 } from "../molecules/DropdownNav";
 import { useNavigate } from "react-router-dom";
+import { HashLink } from "react-router-hash-link";
 
 export const Navbar: React.FC = () => {
   const [colorNav, setColorNav] = useState(false);
@@ -52,7 +53,9 @@ export const Navbar: React.FC = () => {
             <div
               onClick={() => setShowPropertyDropdown2(!showPropertyDropdown2)}
             >
+              {/* <HashLink to={"#house"} smooth> */}
               <NavLink colorNav={colorNav}>Property</NavLink>
+              {/* </HashLink> */}
             </div>
           </div>
           <button className="bg-green-1000 text-green-1300 px-5 py-3 rounded-full font-[600] hover:bg-green-1300 hover:text-green-1000 duration-150">

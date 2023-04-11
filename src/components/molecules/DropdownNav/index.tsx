@@ -1,7 +1,8 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import { RiArrowDropDownLine } from "react-icons/ri";
 import { useNavigate } from "react-router-dom";
-
+// import HashLink from 'react-hash-link'
+import { HashLink as Link } from "react-router-hash-link";
 interface Props {
   showDropdownNav: boolean;
   setShowDropdownNav: React.Dispatch<React.SetStateAction<boolean>>;
@@ -74,33 +75,39 @@ const PropertyDropdown: React.FC<Props2> = ({
 
   return (
     <div className="bg-green-300 rounded-xl w-36 h-40 fixed top-60 right-20 flex flex-col items-start justify-center gap-1 p-2">
-      <p
+      <Link
+        to={"/#recommendation"}
+        smooth
         onClick={() => {
-          navigate("/");
+          // navigate("/");
           setShowDropdownNav(!showDropdownNav);
         }}
         className="hover:bg-green-1200 w-full py-2 px-2 rounded-xl cursor-pointer"
       >
         House
-      </p>
-      <p
+      </Link>
+      <Link
+        to={"/#recommendation"}
+        smooth
         onClick={() => {
-          navigate("/");
+          // navigate("/");
           setShowDropdownNav(!showDropdownNav);
         }}
         className="hover:bg-green-1200 w-full py-2 px-2 rounded-xl cursor-pointer"
       >
         Villa
-      </p>
-      <p
+      </Link>
+      <Link
+        to={"/#recommendation"}
+        smooth
         onClick={() => {
-          navigate("/");
+          // navigate("/");
           setShowDropdownNav(!showDropdownNav);
         }}
         className="hover:bg-green-1200 w-full py-2 px-2 rounded-xl cursor-pointer"
       >
         Apartment
-      </p>
+      </Link>
     </div>
   );
 };
@@ -118,7 +125,9 @@ export const PropertyDropdown2: React.FC<Props3> = ({
 
   return (
     <div className="bg-green-300 rounded-xl w-36 h-40 fixed top-20 right-40 flex flex-col items-start justify-center gap-1 p-2 z-30">
-      <p
+      <Link
+        to={"/#recommendation"}
+        smooth
         onClick={() => {
           navigate("/");
           setShowPropertyDropDown2(!showPropertyDropDown2);
@@ -126,8 +135,10 @@ export const PropertyDropdown2: React.FC<Props3> = ({
         className="hover:bg-green-1200 w-full py-2 px-2 rounded-xl cursor-pointer"
       >
         House
-      </p>
-      <p
+      </Link>
+      <Link
+        to={"/#recommendation"}
+        smooth
         onClick={() => {
           navigate("/");
           setShowPropertyDropDown2(!showPropertyDropDown2);
@@ -135,8 +146,10 @@ export const PropertyDropdown2: React.FC<Props3> = ({
         className="hover:bg-green-1200 w-full py-2 px-2 rounded-xl cursor-pointer"
       >
         Villa
-      </p>
-      <p
+      </Link>
+      <Link
+        to={"/#recommendation"}
+        smooth
         onClick={() => {
           navigate("/");
           setShowPropertyDropDown2(!showPropertyDropDown2);
@@ -144,7 +157,7 @@ export const PropertyDropdown2: React.FC<Props3> = ({
         className="hover:bg-green-1200 w-full py-2 px-2 rounded-xl cursor-pointer"
       >
         Apartment
-      </p>
+      </Link>
     </div>
   );
 };

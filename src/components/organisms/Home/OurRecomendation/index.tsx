@@ -4,7 +4,7 @@ import { FeaturedSectionButtons } from "../../../molecules/FeaturedSectionButton
 
 export const OurRecomendation: React.FC = () => {
   return (
-    <div className="pl-20 pt-32 flex flex-col">
+    <div id="recommendation" className="pl-20 pt-32 flex flex-col">
       <FeaturedSectionButtons />
       <FeaturedCard />
     </div>
