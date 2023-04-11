@@ -11,7 +11,6 @@ export const EmailSubsBox: React.FC = () => {
     alert(`You're successfully subscribe to our website! 🥳`);
     setTexts("");
   };
-  console.log(texts);
 
   return (
     <div className="relative w-full h-72 flex flex-col items-center justify-center rounded-2xl gradient-subs-email">

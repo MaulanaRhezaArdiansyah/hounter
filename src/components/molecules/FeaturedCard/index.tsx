@@ -4,81 +4,122 @@ import { TitleCard } from "../../atoms/FeaturedTitleCard";
 import { PriceCard } from "../../atoms/FeaturedPriceCard";
 import { OwnerCard } from "../../atoms/FeaturedOwnerCard";
 
-export const FeaturedCard: React.FC = () => {
+interface Props {
+  active: string;
+  setActive: React.Dispatch<React.SetStateAction<string>>;
+}
+export const FeaturedCard: React.FC<Props> = ({ active, setActive }) => {
   const featureCards = [
     {
       id: 1,
-      image: "house-1.jpg",
+      image: {
+        url: "house-1.jpg",
+        alt: "house-1",
+      },
       name: "Rheza's House",
       price: 20000000,
-      owner_name: "Rheza",
-      owner_address: "Denpasar, Indonesia",
-      owner_avatar: "rheza.png",
-      category: "house",
+      owner: {
+        name: "Rheza",
+        address: "Denpasar, Indonesia",
+        avatar: "rheza.png",
+      },
+      category: "House",
       preferences: "Popular",
     },
     {
       id: 2,
-      image: "roselands-house.png",
+      image: {
+        url: "roselands-house.png",
+        alt: "roselands-house",
+      },
       name: "Roselands House",
       price: 35000000,
-      owner_name: "Dianne Russell",
-      owner_address: "Manchester, Kentucky",
-      owner_avatar: "dianne-russell.png",
-      category: "house",
+      owner: {
+        name: "Dianne Russell",
+        address: "Manchester, Kentucky",
+        avatar: "dianne-russell.png",
+      },
+      category: "House",
       preferences: "New House",
     },
     {
       id: 3,
-      image: "woodlandside.png",
+      image: {
+        url: "woodlandside.png",
+        alt: "woodlandside",
+      },
       name: "Woodlandside",
       price: 45000000,
-      owner_name: "Robert Fox",
-      owner_address: "Dr. San Jose, South Dakota",
-      owner_avatar: "robert-fox.png",
-      category: "house",
+      owner: {
+        name: "Robert Fox",
+        address: "Dr. San Jose, South Dakota",
+        avatar: "robert-fox.png",
+      },
+      category: "House",
       preferences: "Best Deals",
     },
     {
       id: 4,
-      image: "theoldlighthouse.png",
+      image: {
+        url: "theoldlighthouse.png",
+        alt: "theoldlighthouse",
+      },
       name: "The Old Light House",
       price: 55000000,
-      owner_name: "Ronald Richards",
-      owner_address: "Santa Ana, Illinois",
-      owner_avatar: "ronald-richards.png",
-      category: "house",
+      owner: {
+        name: "Ronald Richards",
+        address: "Santa Ana, Illinois",
+        avatar: "ronald-richards.png",
+      },
+      category: "House",
+      preferences: "Popular",
+    },
+    {
+      id: 5,
+      image: {
+        url: "theoldlighthouse.png",
+        alt: "theoldlightvilla",
+      },
+      name: "The Old Light Villa",
+      price: 55000000,
+      owner: {
+        name: "Ronald Richards",
+        address: "Santa Ana, Illinois",
+        avatar: "ronald-richards.png",
+      },
+      category: "Villa",
       preferences: "Popular",
     },
   ];
+  const filteredCategory = featureCards.filter(
+    (item) => item.category === active
+  );
+  console.log(filteredCategory);
+
   return (
     <div className="flex items-center gap-3 overflow-x-auto scrollbar-hide no-scrollbar">
-      {featureCards?.map(
-        ({
-          id,
-          image,
-          name,
-          price,
-          owner_name,
-          owner_avatar,
-          owner_address,
-          preferences,
-        }) => (
-          <div key={id} className="pl-12 flex flex-col cursor-pointer">
-            <ImageCard
-              source={`https://househunter.vercel.app/${image}`}
-              preferences={preferences}
-            ></ImageCard>
-            <TitleCard>{name}</TitleCard>
-            <PriceCard>{price}</PriceCard>
-            <OwnerCard
-              source={`https://househunter.vercel.app/${owner_avatar}`}
-              name={owner_name}
-              owner_name={owner_name}
-              owner_address={owner_address}
-            />
-          </div>
+      {filteredCategory.length !== 0 ? (
+        filteredCategory?.map(
+          ({ id, image, name, price, owner, preferences }) => (
+            <div key={id} className="pl-12 flex flex-col cursor-pointer">
+              <ImageCard
+                source={`https://househunter.vercel.app/${image.url}`}
+                alt={image.alt}
+                preferences={preferences}
+              ></ImageCard>
+              <TitleCard>{name}</TitleCard>
+              <PriceCard>{price}</PriceCard>
+              <OwnerCard
+                source={`https://househunter.vercel.app/${owner.avatar}`}
+                name={owner.name}
+                owner_name={owner.name}
+                owner_address={owner.address}
+              />
+            </div>
+          )
         )
+      ) : (
+        <p>Data is empty...</p>
       )}
     </div>
   );

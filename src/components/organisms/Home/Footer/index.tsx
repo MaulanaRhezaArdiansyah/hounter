@@ -1,5 +1,6 @@
 import React from "react";
 import { Logo } from "../../../atoms/Logo";
+import { HashLink } from "react-router-hash-link";
 
 import { BlurImageFooter } from "../../../atoms/BlurImageFooter";
 import { SocialMediaFooter } from "../../../molecules/SocialMediaFooter";
@@ -19,9 +20,15 @@ export const Footer: React.FC = () => {
       </div>
       <div className="flex md:gap-32">
         <FooterInfo infoTitle="Property">
-          <p>House</p>
-          <p>Apartment</p>
-          <p>Villa</p>
+          <HashLink to={"/#recommendation"} smooth>
+            House
+          </HashLink>
+          <HashLink to={"/#recommendation"} smooth>
+            Villa
+          </HashLink>
+          <HashLink to={"/#recommendation"} smooth>
+            Apartment
+          </HashLink>
         </FooterInfo>
         <FooterInfo infoTitle="Article">
           <p>New Article</p>

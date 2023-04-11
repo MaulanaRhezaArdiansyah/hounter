@@ -6,8 +6,15 @@ import { HiHome } from "react-icons/hi";
 import { MdApartment, MdVilla } from "react-icons/md";
 import { FiChevronRight, FiChevronLeft } from "react-icons/fi";
 
-export const FeaturedSectionButtons: React.FC = () => {
-  const [active, setActive] = useState("House");
+interface Props {
+  active: string;
+  setActive: React.Dispatch<React.SetStateAction<string>>;
+}
+export const FeaturedSectionButtons: React.FC<Props> = ({
+  active,
+  setActive,
+}) => {
+  // const [active, setActive] = useState("House");
   return (
     <div className="flex justify-between mb-5">
       <div>

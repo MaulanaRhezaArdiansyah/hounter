@@ -9,11 +9,9 @@ export const ReadyToSellRightSection: React.FC = () => {
         <ReactPlayer
           // playIcon
           onPause={() => {
-            console.log("paused");
             setPlay(false);
           }}
           onPlay={() => {
-            console.log("resume");
             setPlay(true);
           }}
           playing={true}

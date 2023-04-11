@@ -29,3 +29,27 @@ body {
 .review-text {
   box-shadow: 0px 9px 32px rgba(89, 92, 219, 0.1);
 }
+
+.about-us {
+  text-shadow: 1px 5px 10px black;
+}
+
+.crew-card {
+  /* box-shadow: 0 0 2px black; */
+  /* box-shadow: -3px 10px 27px -10px rgba(16, 185, 129, 0.75);
+  -webkit-box-shadow: -3px 10px 27px -10px rgba(16, 185, 129, 0.75);
+  -moz-box-shadow: -3px 10px 27px -10px rgba(16, 185, 129, 0.75); */
+  box-shadow: -3px 10px 27px -10px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: -3px 10px 27px -10px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: -3px 10px 27px -10px rgba(0, 0, 0, 0.75);
+}
+
+.behind-hounter {
+  background: rgb(0, 101, 67);
+  background: linear-gradient(
+    90deg,
+    rgba(0, 101, 67, 1) 0%,
+    rgba(44, 227, 166, 1) 65%,
+    rgba(0, 168, 113, 1) 150%
+  );
+}
