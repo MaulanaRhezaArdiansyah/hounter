@@ -5,7 +5,7 @@ import { ReviewCard } from "../../../molecules/ReviewCard";
 
 export const Review: React.FC = () => {
   return (
-    <div className="relative flex flex-col items-center pt-36 mb-32">
+    <div className="relative flex flex-col items-center pt-36">
       <SectionCategory display="flex-col gap-2">See Our Review</SectionCategory>
       <SectionTitle>What Our User Say About Us</SectionTitle>
       <div className="flex w-full px-10 mt-8 gap-12 overflow-x-scroll no-scrollbar scrollbar-hide">
