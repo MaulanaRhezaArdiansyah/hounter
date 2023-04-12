@@ -14,7 +14,6 @@ export const FeaturedSectionButtons: React.FC<Props> = ({
   active,
   setActive,
 }) => {
-  // const [active, setActive] = useState("House");
   return (
     <div className="flex justify-between mb-5">
       <div>

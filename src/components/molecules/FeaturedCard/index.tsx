@@ -94,7 +94,6 @@ export const FeaturedCard: React.FC<Props> = ({ active, setActive }) => {
   const filteredCategory = featureCards.filter(
     (item) => item.category === active
   );
-  console.log(filteredCategory);
 
   return (
     <div className="flex items-center gap-3 overflow-x-auto scrollbar-hide no-scrollbar">

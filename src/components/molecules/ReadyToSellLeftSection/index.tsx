@@ -38,7 +38,6 @@ export const ReadyToSellLeftSection: React.FC = () => {
       </div>
       <div className="flex items-center w-full ml-12">
         <Avatar
-          // source={"../../../../public/rheza.png"}
           source={"https://househunter.vercel.app/rheza.png"}
           name={"rheza"}
           classname="w-12 h-12 mr-4"
@@ -49,10 +48,12 @@ export const ReadyToSellLeftSection: React.FC = () => {
             Manager Director
           </p>
         </div>
-        <GreenButton
-          buttonIcon={<BsFillTelephoneFill />}
-          children={"Contact Now"}
-        />
+        <div onClick={() => alert("This feature still on development! 🙏")}>
+          <GreenButton
+            buttonIcon={<BsFillTelephoneFill />}
+            children={"Contact Now"}
+          />
+        </div>
       </div>
     </div>
   );

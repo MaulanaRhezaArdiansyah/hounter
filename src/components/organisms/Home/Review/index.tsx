@@ -1,51 +1,80 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { SectionCategory } from "../../../atoms/SectionCategory";
 import { SectionTitle } from "../../../atoms/SectionTitle";
 import { ReviewCard } from "../../../molecules/ReviewCard";
+import { reviews } from "../../../../data";
+import { FiChevronLeft, FiChevronRight } from "react-icons/fi";
 
-export const Review: React.FC = () => {
+export const Review: React.FC = (e) => {
+  useEffect(() => {
+    slidingCarousel(e);
+  }, []);
   return (
     <div className="relative flex flex-col items-center pt-36">
       <SectionCategory display="flex-col gap-2">See Our Review</SectionCategory>
       <SectionTitle>What Our User Say About Us</SectionTitle>
       <div className="flex w-full px-10 mt-8 gap-12 overflow-x-scroll no-scrollbar scrollbar-hide">
-        <ReviewCard
-          source={"https://househunter.vercel.app/review-1.png"}
-          alt="Review Pic"
-          title={"Best! I got the house I wanted through Hounter"}
-          subtitle={
-            "Through this website I can get a house with the type and specifications I want very easily, without a complicated process to be able to find information on the house we want."
-          }
-          customerAvatar={"https://househunter.vercel.app/dianne-russell.png"}
-          customerName={"Dianne Russell"}
-          profession={"Manager Director"}
-          rating={4.6}
-        />
-        <ReviewCard
-          source="https://househunter.vercel.app/review-1.png"
-          alt="Review Pic"
-          title={"Best! I got the house I wanted through Hounter"}
-          subtitle={
-            "Through this website I can get a house with the type and specifications I want very easily, without a complicated process to be able to find information on the house we want."
-          }
-          customerAvatar={"https://househunter.vercel.app/rheza.png"}
-          customerName={"Rheza Ardi"}
-          profession={"Software Developer"}
-          rating={4.8}
-        />
-        <ReviewCard
-          source="https://househunter.vercel.app/review-1.png"
-          alt="Review Pic"
-          title={"Through the Hounter, I can get a house for my self"}
-          subtitle={
-            "By looking for information about what kind of house we want, we managed to get the house we wanted very quickly, and directly connected with the seller to be able to ask about the details, very helpful!"
-          }
-          customerAvatar={"https://househunter.vercel.app/ronald-richards.png"}
-          customerName={"Esther Howard"}
-          profession={"Head of Marketing"}
-          rating={4.5}
-        />
+        <button
+          id="left"
+          className="arrow-button bg-green-1200 w-12 h-12 rounded-full absolute z-10 flex items-center justify-center left-14 bottom-96 opacity-20 duration-150 hover:opacity-100"
+        >
+          <FiChevronLeft size={22} color="#ffffff" />
+        </button>
+        <button className="arrow-button bg-green-1200 w-12 h-12 rounded-full absolute z-10 flex items-center justify-center right-14 bottom-96 opacity-20 duration-150 hover:opacity-100">
+          <FiChevronRight size={22} color="#ffffff" />
+        </button>
+
+        {reviews.map(({ id, image, content, reviewer }) => (
+          <ReviewCard
+            id="reviewCard"
+            key={id}
+            source={image.src}
+            alt={image.alt}
+            title={content.title}
+            subtitle={content.subtitle}
+            customerAvatar={reviewer.picture.src}
+            customerName={reviewer.name}
+            profession={reviewer.profession}
+            rating={reviewer.rating}
+          />
+        ))}
       </div>
     </div>
   );
+};
+
+const slidingCarousel = (e: any) => {
+  const carousel = document.querySelector(".carousel");
+  const arrowIcons = document.querySelectorAll(".arrow-button");
+
+  // arrowIcons.forEach((icon) => {
+  //   icon.addEventListener("click", () => {
+  // carousel!.scrollLeft += icon.id ==='left' ? - :
+  //   });
+  // });
+  let isDragStart = false,
+    prevPageX: number,
+    prevScrollLeft: number;
+
+  const dragStart = (e: any) => {
+    // updating global variables value on mouse down event
+    isDragStart = true;
+    prevPageX = e.pageX;
+    prevScrollLeft = carousel!.scrollLeft;
+  };
+
+  const dragStop = () => {
+    isDragStart = false;
+  };
+
+  const dragging = (e: any) => {
+    // scrolling images/carousel lo left according to mouse pointer
+    if (!isDragStart) return;
+    e.preventDefault();
+    let positionDiff = e.pageX - prevPageX;
+    carousel!.scrollLeft = prevScrollLeft - positionDiff;
+  };
+  carousel && carousel.addEventListener("mousemove", dragging);
+  carousel && carousel.addEventListener("mousedown", dragStart);
+  carousel && carousel.addEventListener("mouseup", dragStop);
 };

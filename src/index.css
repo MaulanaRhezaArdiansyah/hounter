@@ -53,3 +53,21 @@ body {
     rgba(0, 168, 113, 1) 150%
   );
 }
+
+::-webkit-scrollbar {
+  width: 1rem;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 1rem;
+  background: #10b981;
+  transition: all 0.5s ease-in-out;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #047857;
+}
+
+::-webkit-scrollbar-track {
+  background: #d1fae5;
+}

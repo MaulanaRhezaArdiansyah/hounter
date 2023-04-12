@@ -2,14 +2,15 @@ import React, { useEffect, useState } from "react";
 import { Logo } from "../atoms/Logo";
 import { NavLink } from "../atoms/NavLink";
 import { DropdownNav, PropertyDropdown2 } from "../molecules/DropdownNav";
-import { useNavigate } from "react-router-dom";
-import { HashLink } from "react-router-hash-link";
+import { useNavigate, useLocation } from "react-router-dom";
+// import { HashLink } from "react-router-hash-link";
 
 export const Navbar: React.FC = () => {
   const [colorNav, setColorNav] = useState(false);
   const [showDropdownNav, setShowDropdownNav] = useState(false);
   const [showPropertyDropdown2, setShowPropertyDropdown2] = useState(false);
   const navigate = useNavigate();
+  const location = useLocation();
 
   const changeColorNavbar = () => {
     if (window.scrollY >= 56) {
@@ -28,7 +29,11 @@ export const Navbar: React.FC = () => {
     <>
       <nav
         className={`${
-          colorNav ? "bg-green-1200/80 backdrop-blur-sm" : "bg-transparent"
+          location.pathname === "/article"
+            ? "bg-green-1200/80 backdrop-blur-sm"
+            : colorNav
+            ? "bg-green-1200/80 backdrop-blur-sm"
+            : "bg-transparent"
         } flex items-center justify-between px-20 h-14 md:h-24 fixed left-0 right-0 duration-200 ease-in-out z-30`}
       >
         <Logo />

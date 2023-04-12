@@ -8,8 +8,12 @@ export const EmailSubsBox: React.FC = () => {
   const [texts, setTexts] = useState<string>("");
   const subscribe = (event: React.FormEvent) => {
     event.preventDefault();
-    alert(`You're successfully subscribe to our website! 🥳`);
-    setTexts("");
+    if (!texts.includes("@gmail.com")) {
+      alert("Your input are wrong! Should be an email format!");
+    } else {
+      alert(`You're successfully subscribe to our website! 🥳`);
+      setTexts("");
+    }
   };
 
   return (
@@ -23,7 +27,7 @@ export const EmailSubsBox: React.FC = () => {
         children="Subscribe Now"
         section="email-subs"
         widthButton="w-60"
-        placeholder="Text your email here"
+        placeholder="Type your email here"
         texts={texts}
         setTexts={setTexts}
         iconSearch={<AiFillMail size={32} color="#3B82F6" />}

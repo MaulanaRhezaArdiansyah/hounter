@@ -2,6 +2,7 @@ import React from "react";
 import { BsFillStarFill } from "react-icons/bs";
 
 export interface Props {
+  id?: string;
   title: string;
   subtitle: string;
   customerAvatar: string;

@@ -9,6 +9,7 @@ import { PropsReviewImage } from "../../atoms/ReviewImage";
 //   alt: string;
 // }
 export const ReviewCard: React.FC<PropsReviewImage & Props> = ({
+  id,
   title,
   subtitle,
   customerAvatar,
