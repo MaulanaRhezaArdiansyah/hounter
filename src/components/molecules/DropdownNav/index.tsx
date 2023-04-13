@@ -132,7 +132,7 @@ export const PropertyDropdown2: React.FC<Props3> = ({
           navigate("/");
           setShowPropertyDropDown2(!showPropertyDropDown2);
         }}
-        className="hover:bg-green-1200 w-full py-2 px-2 rounded-xl cursor-pointer"
+        className="hover:bg-green-1200 text-green-1300 hover:text-white w-full py-2 px-2 rounded-xl cursor-pointer"
       >
         House
       </Link>
@@ -143,7 +143,7 @@ export const PropertyDropdown2: React.FC<Props3> = ({
           navigate("/");
           setShowPropertyDropDown2(!showPropertyDropDown2);
         }}
-        className="hover:bg-green-1200 w-full py-2 px-2 rounded-xl cursor-pointer"
+        className="hover:bg-green-1200 text-green-1300 hover:text-white w-full py-2 px-2 rounded-xl cursor-pointer"
       >
         Villa
       </Link>
@@ -151,10 +151,11 @@ export const PropertyDropdown2: React.FC<Props3> = ({
         to={"/#recommendation"}
         smooth
         onClick={() => {
-          navigate("/");
+          navigate("/#recommendation");
+          // navigate("/");
           setShowPropertyDropDown2(!showPropertyDropDown2);
         }}
-        className="hover:bg-green-1200 w-full py-2 px-2 rounded-xl cursor-pointer"
+        className="hover:bg-green-1200 text-green-1300 hover:text-white w-full py-2 px-2 rounded-xl cursor-pointer"
       >
         Apartment
       </Link>

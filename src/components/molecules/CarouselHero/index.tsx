@@ -1,37 +1,14 @@
 import React from "react";
+import { carouselHero } from "../../../data";
 
 export const CarouselHero: React.FC = () => {
-  const carousel = [
-    {
-      id: 1,
-      image: [
-        "https://househunter.vercel.app/rheza.png",
-        "https://househunter.vercel.app/rheza.png",
-      ],
-      title: "1K+ People",
-      subtitle: "Successfully Getting Home",
-    },
-    {
-      id: 2,
-      image: "https://househunter.vercel.app/rheza.png",
-      title: "56 Houses",
-      subtitle: "Sold Monthly",
-    },
-    {
-      id: 3,
-      image: "https://househunter.vercel.app/rheza.png",
-      title: "4K+ People",
-      subtitle: "People Looking for New Homes",
-    },
-  ];
-
-  const images = carousel.map((img) => img.image);
+  const images = carouselHero.map((img) => img.image);
   const isString = images.map((more) => typeof more);
   // console.log(isString);
 
   return (
     <div className="flex items-center justify-start self-end p-14 gap-3 w-[1000px] h-56  whitespace-nowrap absolute">
-      {carousel.map(({ id, title, image, subtitle }) => (
+      {carouselHero.map(({ id, title, image, subtitle }) => (
         <div
           key={id}
           className="bg-white h-[5.5rem] rounded-3xl flex items-center p-5 gap-3"

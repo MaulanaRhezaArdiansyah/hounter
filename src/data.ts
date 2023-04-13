@@ -71,6 +71,7 @@ export const articles = [
     name: "Darlene Robertson",
     article_title: "12 Things to know before buying a house",
     time_stamp: "8 min read | 25 Apr 2021",
+    type: "New",
   },
   {
     id: 2,
@@ -78,6 +79,7 @@ export const articles = [
     name: "Darlene Robertson",
     article_title: "12 Things to know before buying a house",
     time_stamp: "8 min read | 25 Apr 2021",
+    type: "New",
   },
   {
     id: 3,
@@ -85,6 +87,7 @@ export const articles = [
     name: "Darlene Robertson",
     article_title: "12 Things to know before buying a house",
     time_stamp: "8 min read | 25 Apr 2021",
+    type: "New",
   },
   {
     id: 4,
@@ -92,5 +95,191 @@ export const articles = [
     name: "Darlene Robertson",
     article_title: "12 Things to know before buying a house",
     time_stamp: "8 min read | 25 Apr 2021",
+    type: "New",
+  },
+  {
+    id: 5,
+    avatar: "https://househunter.vercel.app/ronald-richards.png",
+    name: "Darlene Robertson",
+    article_title: "12 Things to know before buying a house",
+    time_stamp: "8 min read | 25 Apr 2021",
+    type: "Popular",
+  },
+  {
+    id: 6,
+    avatar: "https://househunter.vercel.app/ronald-richards.png",
+    name: "Darlene Robertson",
+    article_title: "12 Things to know before buying a house",
+    time_stamp: "8 min read | 25 Apr 2021",
+    type: "Popular",
+  },
+  {
+    id: 7,
+    avatar: "https://househunter.vercel.app/ronald-richards.png",
+    name: "Darlene Robertson",
+    article_title: "12 Things to know before buying a house",
+    time_stamp: "8 min read | 25 Apr 2021",
+    type: "Most Read",
+  },
+  {
+    id: 8,
+    avatar: "https://househunter.vercel.app/ronald-richards.png",
+    name: "Darlene Robertson",
+    article_title: "12 Things to know before buying a house",
+    time_stamp: "8 min read | 25 Apr 2021",
+    type: "Most Read",
+  },
+  {
+    id: 9,
+    avatar: "https://househunter.vercel.app/ronald-richards.png",
+    name: "Darlene Robertson",
+    article_title: "12 Things to know before buying a house",
+    time_stamp: "8 min read | 25 Apr 2021",
+    type: "Tips & Tricks",
+  },
+  {
+    id: 10,
+    avatar: "https://househunter.vercel.app/ronald-richards.png",
+    name: "Darlene Robertson",
+    article_title: "12 Things to know before buying a house",
+    time_stamp: "8 min read | 25 Apr 2021",
+    type: "Tips & Tricks",
+  },
+];
+export const featureCards = [
+  {
+    id: 1,
+    image: {
+      url: "house-1.jpg",
+      alt: "house-1",
+    },
+    name: "Rheza's House",
+    price: 20000000,
+    owner: {
+      name: "Rheza",
+      address: "Denpasar, Indonesia",
+      avatar: "rheza.png",
+    },
+    category: "House",
+    preferences: "Popular",
+  },
+  {
+    id: 2,
+    image: {
+      url: "roselands-house.png",
+      alt: "roselands-house",
+    },
+    name: "Roselands House",
+    price: 35000000,
+    owner: {
+      name: "Dianne Russell",
+      address: "Manchester, Kentucky",
+      avatar: "dianne-russell.png",
+    },
+    category: "House",
+    preferences: "New House",
+  },
+  {
+    id: 3,
+    image: {
+      url: "woodlandside.png",
+      alt: "woodlandside",
+    },
+    name: "Woodlandside",
+    price: 45000000,
+    owner: {
+      name: "Robert Fox",
+      address: "Dr. San Jose, South Dakota",
+      avatar: "robert-fox.png",
+    },
+    category: "House",
+    preferences: "Best Deals",
+  },
+  {
+    id: 4,
+    image: {
+      url: "theoldlighthouse.png",
+      alt: "theoldlighthouse",
+    },
+    name: "The Old Light House",
+    price: 55000000,
+    owner: {
+      name: "Ronald Richards",
+      address: "Santa Ana, Illinois",
+      avatar: "ronald-richards.png",
+    },
+    category: "House",
+    preferences: "Popular",
+  },
+  {
+    id: 5,
+    image: {
+      url: "theoldlighthouse.png",
+      alt: "theoldlightvilla",
+    },
+    name: "The Old Light Villa",
+    price: 55000000,
+    owner: {
+      name: "Ronald Richards",
+      address: "Santa Ana, Illinois",
+      avatar: "ronald-richards.png",
+    },
+    category: "Villa",
+    preferences: "Popular",
+  },
+  {
+    id: 6,
+    image: {
+      url: "theoldlighthouse.png",
+      alt: "theoldlightvilla",
+    },
+    name: "The Old Light Apartment",
+    price: 55000000,
+    owner: {
+      name: "Ronald Richards",
+      address: "Santa Ana, Illinois",
+      avatar: "ronald-richards.png",
+    },
+    category: "Apartment",
+    preferences: "Popular",
+  },
+  {
+    id: 7,
+    image: {
+      url: "theoldlighthouse.png",
+      alt: "theoldlightvilla",
+    },
+    name: "The Old Light Apartment",
+    price: 55000000,
+    owner: {
+      name: "Ronald Richards",
+      address: "Santa Ana, Illinois",
+      avatar: "ronald-richards.png",
+    },
+    category: "Apartment",
+    preferences: "Best Deals",
+  },
+];
+export const carouselHero = [
+  {
+    id: 1,
+    image: [
+      "https://househunter.vercel.app/rheza.png",
+      "https://househunter.vercel.app/rheza.png",
+    ],
+    title: "1K+ People",
+    subtitle: "Successfully Getting Home",
+  },
+  {
+    id: 2,
+    image: "https://househunter.vercel.app/rheza.png",
+    title: "56 Houses",
+    subtitle: "Sold Monthly",
+  },
+  {
+    id: 3,
+    image: "https://househunter.vercel.app/rheza.png",
+    title: "4K+ People",
+    subtitle: "People Looking for New Homes",
   },
 ];

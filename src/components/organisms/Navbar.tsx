@@ -9,6 +9,7 @@ export const Navbar: React.FC = () => {
   const [colorNav, setColorNav] = useState(false);
   const [showDropdownNav, setShowDropdownNav] = useState(false);
   const [showPropertyDropdown2, setShowPropertyDropdown2] = useState(false);
+  const [activePage, setActivePage] = useState("/");
   const navigate = useNavigate();
   const location = useLocation();
 
@@ -49,18 +50,56 @@ export const Navbar: React.FC = () => {
         </div>
         <div className="flex items-center max-md:hidden gap-14">
           <div className="flex items-center gap-6">
-            <div onClick={() => navigate("/about")}>
-              <NavLink colorNav={colorNav}>About Us</NavLink>
-            </div>
-            <div onClick={() => navigate("/article")}>
-              <NavLink colorNav={colorNav}>Article</NavLink>
+            <div
+              onClick={() => {
+                setActivePage("/about");
+                navigate("/about");
+              }}
+            >
+              <NavLink
+                active={
+                  activePage === "/about" && location.pathname === "/about"
+                    ? "bg-green-1000 text-green-1300 border-green-1000"
+                    : ""
+                }
+                colorNav={colorNav}
+              >
+                About Us
+              </NavLink>
             </div>
             <div
-              onClick={() => setShowPropertyDropdown2(!showPropertyDropdown2)}
+              onClick={() => {
+                setActivePage("/article");
+                navigate("/article");
+              }}
             >
-              {/* <HashLink to={"#house"} smooth> */}
-              <NavLink colorNav={colorNav}>Property</NavLink>
-              {/* </HashLink> */}
+              <NavLink
+                active={
+                  activePage === "/article" && location.pathname === "/article"
+                    ? "bg-green-1000 text-green-1300 border-green-1000"
+                    : ""
+                }
+                colorNav={colorNav}
+              >
+                Article
+              </NavLink>
+            </div>
+            <div
+              onClick={() => {
+                setActivePage("/");
+                setShowPropertyDropdown2(!showPropertyDropdown2);
+              }}
+            >
+              <NavLink
+                active={
+                  location.hash === "#recommendation"
+                    ? "bg-green-1000 text-green-1300 border-green-1000"
+                    : ""
+                }
+                colorNav={colorNav}
+              >
+                Property
+              </NavLink>
             </div>
           </div>
           <button className="bg-green-1000 text-green-1300 px-5 py-3 rounded-full font-[600] hover:bg-green-1300 hover:text-green-1000 duration-150">
